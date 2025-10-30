@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" href="/img/LOGO AÇAI-2.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruto da Terra</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <div class="nav-img">
+                <img class="logo-img" src="/img/LOGO AÇAI-2.png" alt="Logo da Fruto da Terra">
+            </div>
+            <ul class="nav-bottom" role="navigation" aria-label="Menu principal">
+                <li><a href="#product">
+                    <h3 class="menu-item active">Produtos</h3>
+                </a></li>
+                <li><a href="#footer">
+                    <h3 class="menu-item">Contato</h3>
+                </a></li>
+                <li><a href="#about">
+                    <h3 class="menu-item">Sobre nós</h3>
+                </a></li>
+                <li><a href="#store">
+                    <h3 class="menu-item">Lojas</h3>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="about-section" >
+                <div class="about" id="about">
+                    <h2 class="about-title">Quem somos nós</h2>
+                    <p>A Fruto da Terra é mais do que uma marca — é uma experiência para quem ama açaí e valoriza
+                        qualidade de verdade. <br>Nascemos com o propósito de levar aos cariocas um produto autêntico,
+                        nutritivo e cheio de sabor, feito com ingredientes naturais e selecionados.</p>
+                    <p>Aqui, o açaí vem direto da natureza para sua mesa: fresco, encorpado e com aquele toque artesanal
+                        que faz toda a diferença.<br> E para quem busca mais opções para se refrescar, nossos sorvetes
+                        completam o cardápio com sabores cremosos, tropicais e sempre irresistíveis.</p>
+                </div>
+                <div class="about-img">
+                    <img src="/img/Captura de tela 2025-06-11 213715.png" alt="Imagem institucional da empresa"
+                        class="mug">
+                </div>
+            </div>
+
+            <div class="product" id="product">
+                <h2 class="product-title">Nossos Produtos</h2>
+                <div class="product-wrapper">
+                    <div class="product-item">
+                        <img src="/img/copo de açai.png" alt="Copo de açaí disponível para compra">
+                        <div class="product-bg"></div>
+                        <h3 class="product-title">Copo de Açaí</h3>
+                        <h4 class="product-price">R$10.00</h4>
+                        <button class="buy-button" aria-label="Comprar Copo de Açaí">Compre Agora</button>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="/img/pngwing.com.png" alt="Pote de açaí disponível para compra"
+                        class="pote-acai">
+                        <div class="product-bg"></div>
+                        <h3 class="product-title">Pote de Açaí</h3>
+                        <h4 class="product-price">R$20.00</h4>
+                        <button class="buy-button" aria-label="Comprar Pote de Açaí">Compre Agora</button>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="/img/pngwing.com (1).png" alt="Sorvete artesanal disponível para compra"
+                        class="sorvete">
+                        <div class="product-bg"></div>
+                        <h3 class="product-title">Sorvete</h3>
+                        <h4 class="product-price">R$9.90</h4>
+                        <button class="buy-button" aria-label="Comprar Sorvete">Compre Agora</button>
+                    </div>
+                </div>
+                <!-- Controles do carrossel (movidos para fora do wrapper para fixação) -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" aria-label="Produto anterior">←</button>
+                    <button class="carousel-btn next" aria-label="Próximo produto">→</button>
+                </div>
+                <!-- Indicadores do carrossel (adicionados para funcionalidade com JS) -->
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                </div>
+            </div>
+
+            <!-- Modal Copo de Açaí -->
+            <div class="modal-copo-açai hidden" role="dialog" aria-labelledby="modal-copo-title" aria-hidden="true">
+                <h3 id="modal-copo-title">Personalize seu Copo de Açaí</h3>
+                <div class="cup-size">
+                    <h4>Tamanho do Copo</h4>
+                    <label for="ml440">440ML</label>
+                    <input type="checkbox" id="ml440">
+                    <label for="ml550">550ML</label>
+                    <input type="checkbox" id="ml550">
+                    <label for="ml770">770ML</label>
+                    <input type="checkbox" id="ml770">
+                </div>
+
+                <div class="add-ons">
+                    <h4>Complemento</h4>
+                    <label for="fruit1">Frutas</label>
+                    <input type="checkbox" id="fruit1">
+                    <label for="granola1">Granola</label>
+                    <input type="checkbox" id="granola1">
+                    <label for="pacoca1">Paçoca</label>
+                    <input type="checkbox" id="pacoca1">
+                    <label for="caldas1">Caldas</label>
+                    <input type="checkbox" id="caldas1">
+                </div>
+                <button class="pay-button">Confirmar</button>
+                <button class="close" aria-label="Fechar modal">X</button>
+            </div>
+
+            <!-- Modal Pote de Açaí -->
+            <div class="modal-pote-acai hidden" role="dialog" aria-labelledby="modal-pote-title" aria-hidden="true">
+                <h3 id="modal-pote-title">Personalize seu Pote de Açaí</h3>
+                <div class="add-ons">
+                    <h4>Complemento</h4>
+                    <label for="fruit2">Frutas</label>
+                    <input type="checkbox" id="fruit2">
+                    <label for="granola2">Granola</label>
+                    <input type="checkbox" id="granola2">
+                    <label for="pacoca2">Paçoca</label>
+                    <input type="checkbox" id="pacoca2">
+                    <label for="caldas2">Caldas</label>
+                    <input type="checkbox" id="caldas2">
+                </div>
+                <button class="pay-button">Confirmar</button>
+                <button class="close" aria-label="Fechar modal">X</button>
+            </div>
+
+            <!-- Modal Sorvete -->
+            <div class="modal-sorvete hidden" role="dialog" aria-labelledby="modal-sorte-title" aria-hidden="true">
+                <h3 id="modal-sorvete-title">Personalize seu Sorvete</h3>
+                <div class="add-ons">
+                    <h4>Complemento</h4>
+                    <label for="chocolate">Chocolate</label>
+                    <input type="checkbox" id="chocolate">
+                    <label for="baunilha">Baunilha</label>
+                    <input type="checkbox" id="baunilha">
+                    <label for="morango">Morango</label>
+                    <input type="checkbox" id="morango">
+                    <label for="flocos">Flocos</label>
+                    <input type="checkbox" id="flocos">
+                </div>
+                <button class="pay-button">Confirmar</button>
+                <button class="close" aria-label="Fechar modal">X</button>
+            </div>
+
+            <!-- Lojas -->
+            <div class="store" id="store">
+                <h2 class="store-title">Nossas Lojas – Um Ponto de Encontro com o Sabor</h2>
+                <p>As lojas Fruto da Terra foram pensadas para muito mais do que servir açaí e sorvete.</p>
+                <h4>Venha nos visitar e descubra porque a Fruto da Terra já é o novo ponto de encontro dos apaixonados
+                    por açaí e sorvete.</h4>
+                <div class="store-img">
+                    <img src="/img/fachada da loja.png" alt="Fachada da loja Fruto da Terra">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <h2>Siga a Gente!</h2>
+        <div class="f-icons">
+            <img src="/img/pngwing.com (2).png" alt="Ícone do Instagram">
+            <img src="/img/twitter.png" alt="Ícone do Twitter">
+            <img src="/img/whatsapp.png" alt="Ícone do WhatsApp">
+        </div>
+    </footer>
+
+    <script src="/app.js"></script>
+</body>
+
+</html>
